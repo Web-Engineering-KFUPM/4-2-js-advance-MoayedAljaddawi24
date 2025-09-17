@@ -7,7 +7,7 @@ INSTRUCTIONS:
 • Use the Console (F12 → Console) to view outputs.
 =================================================================
 */
-like 
+
 //You can uncomment the console.log code to check if your js file is connected with html file or not.
 //console.log("%cJS Lab Connected — Start completing the TODOs for Advance JavaScript!", "font-weight:bold; font-size:14px");
 
@@ -21,6 +21,23 @@ Task:
 3) Add a setter updateGpa(newGpa) or use a set accessor for gpa that validates 0.0–4.0.
 4) Create an instance/object and output its attributes using the getter(s).
 */
+const Student = {
+  firstName: "Moayed",
+  lastName: "Aljaddawi",
+  _gpa: 3.8,             
+  get fullName() {       
+    return this.firstName + " " + this.lastName;
+  },
+  get gpa() {            
+    return this._gpa;
+  },
+  set updateGpa(newGpa) {       
+    if (newGpa >= 0.0 && newGpa <= 4.0) {
+      this._gpa = newGpa;
+    }
+  }
+};
+
 
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
