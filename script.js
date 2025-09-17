@@ -53,6 +53,7 @@ const courseTitles = { A101: "Intro", A201: "Data Structures" };
 for (const key in courseTitles) {
   console.log(key + " " + courseTitles[key])
 }
+
 // =========================================
 // TODO-3: STRING OBJECT — charAt() & length
 // =========================================
