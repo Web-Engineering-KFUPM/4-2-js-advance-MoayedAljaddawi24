@@ -62,6 +62,10 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+const Str = "Hello";
+console.log("'Hello' size = " + Str.length);     
+console.log("second character = " + Str.charAt(1));  
+console.log("forth character = " + Str.charAt(3));  
 
 // ===================================
 // TODO-4: DATE — day, month, and year
