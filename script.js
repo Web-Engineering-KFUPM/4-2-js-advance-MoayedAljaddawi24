@@ -91,9 +91,9 @@ Task:
 3) Display both values.
 */
 const nums = [10, 2, 30, 1, 4, 9, 6, 8, 17, 25];
-const min = Math.min(...nums));  
+const min = Math.min(...nums);  
 const max = Math.max(...nums);
-console.log("extremas : min = " + min + " max = " + max); 
+console.log("extremas : min = " + min + ", max = " + max); 
 
 // ===================================================================
 // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case
@@ -105,6 +105,22 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+function arrayItem(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    throw new Error("Array must be non-empty.");
+  }
+  return Math.max(...arr);
+}
+
+try {
+  const x = arrayItem([]); 
+  console.log("Maximum value is:", x); 
+} catch (e) {
+  console.log("Caught an error:", e.message);
+} finally {
+  console.log("finally block operated");
+}
+
 
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
